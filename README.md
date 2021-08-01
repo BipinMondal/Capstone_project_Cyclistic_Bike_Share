@@ -20,7 +20,7 @@ to identify how casual riders and annual members use cyclistic bikes differently
 into annual members.
 
 Data Sources
-There's a total of 12 datasets used for this analysis starting from July 2020 to June 2021 which is available [LINK] (https://divvy-tripdata.s3.amazonaws.com/index.html)
+There's a total of 12 datasets used for this analysis starting from July 2020 to June 2021 which is available LINK (https://divvy-tripdata.s3.amazonaws.com/index.html)
 under the [LICENSE](https://www.divvybikes.com/data-license-agreement)(Note: The datasets have a different name because Cyclistic is a fictional company).
 Each dataset captures the details of every ride logged by the customers of Cyclistic 
 and data has been publicly made available which has been scrubbed to omit rider's personal information.
