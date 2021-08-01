@@ -1,1 +1,27 @@
+# Checking the datasets whether the ride_types are only 2 types
+  SELECT ride_types
+  FROM `cyclistic-bikeshare.combined.data`;
+  
+# Ordering the sheet by start_time by Ascending Order
+  SELECT *
+  FROM `cyclistic-bikeshare.combined.data`
+  ORDER BY start_time ASC;
+  
+# Save the data in excel format
+
+# Checking duplicate data in excel for all the datasets
+
+# Creating a New Column 'ride_time' to calculate the riding time of a ride by (end_time - start_time)
+
+# Deleting negative as well as 0 ride duration from the column 'ride_time' By Adding a Filter to the ride_time Column
+
+# Create a  new column 'day_of_week' to denote the weekdays as numerical format (1 - Sunday, 2- Monday .....)
+  =WEEKDAY(start_date,1)
+  
+# Calculate the Average ride_time and Total_ride
+=AVERAGE(ride_time)  -- for Average ride_time
+=SUM(ride_id)   -- for Total ride
+
+
+
 
