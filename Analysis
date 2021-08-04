@@ -22,6 +22,32 @@
 =AVERAGE(ride_time)  -- for Average ride_time
 =SUM(ride_id)   -- for Total ride
 
+# Count the total no of weekday rides,
+  SELECT COUNT(CASE 
+                  WHEN day_of_week = 1 THEN COUNT(*)
+                  WHEN day_of_week = 2 THEN COUNT(*)
+                  WHEN day_of_week = 3 THEN COUNT(*)
+                  WHEN day_of_week = 4 THEN COUNT(*)
+                  WHEN day_of_week = 5 THEN COUNT(*)
+                  WHEN day_of_week = 6 THEN COUNT(*)
+                  WHEN day_of_week = 7 THEN COUNT(*)
+                  ELSE NULL
+             )
+  FROM `cyclistic-bikeshare.combined.data`          
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+
 
 
 
