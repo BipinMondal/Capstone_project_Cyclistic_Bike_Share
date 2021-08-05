@@ -23,18 +23,39 @@
 =SUM(ride_id)   -- for Total ride
 
 # Count the total no of weekday rides,
-  SELECT COUNT(CASE 
-                  WHEN day_of_week = 1 THEN COUNT(*)
-                  WHEN day_of_week = 2 THEN COUNT(*)
-                  WHEN day_of_week = 3 THEN COUNT(*)
-                  WHEN day_of_week = 4 THEN COUNT(*)
-                  WHEN day_of_week = 5 THEN COUNT(*)
-                  WHEN day_of_week = 6 THEN COUNT(*)
-                  WHEN day_of_week = 7 THEN COUNT(*)
-                  ELSE NULL
-             )
-  FROM `cyclistic-bikeshare.combined.data`          
-                  
+  SELECT CONCAT('The total no. of riders on Sunday is',COUNT(day_of_week))
+  FROM `cyclistic-bikeshare.combined.data`
+  WHERE day_of_week = 1
+  SELECT CONCAT('The total no. of riders on Monday is',COUNT(day_of_week))
+  FROM `cyclistic-bikeshare.combined.data`
+  WHERE day_of_week = 2
+  SELECT CONCAT('The total no. of riders on Tuesday is',COUNT(day_of_week))
+  FROM `cyclistic-bikeshare.combined.data`
+  WHERE day_of_week = 3
+  SELECT CONCAT('The total no. of riders on Wednesday is',COUNT(day_of_week))
+  FROM `cyclistic-bikeshare.combined.data`
+  WHERE day_of_week = 4
+  SELECT CONCAT('The total no. of riders on Thursday is',COUNT(day_of_week))
+  FROM `cyclistic-bikeshare.combined.data`
+  WHERE day_of_week = 5
+  SELECT CONCAT('The total no. of riders on Friday is',COUNT(day_of_week))
+  FROM `cyclistic-bikeshare.combined.data`
+  WHERE day_of_week = 6
+  SELECT CONCAT('The total no. of riders on Saturday is',COUNT(day_of_week))
+  FROM `cyclistic-bikeshare.combined.data`
+  WHERE day_of_week = 7
+  
+# Similarly finding the total no of weekend riders for both members and casual
+  SELECT COUNT(day_of_week)
+  FROM `cyclistic-bikeshare.combined.data`
+  WHERE member_casual = member
+  SELECT COUNT(day_of_week)
+  FROM `cyclistic-bikeshare.combined.data`
+  WHERE member_casual = casual
+  
+# Using Filters in excel , we can the total no of riders whose ride duration is more than 12 hours
+  =COUNTIFS(average_ride,">12:00:00",member_casual,"member")   -- for members
+  =COUNTIFS(average_ride,">12:00:00",member_casual,"casual")   -- for casual             
                   
                   
                   
